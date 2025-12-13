@@ -1,3 +1,7 @@
+serviceAccount: projects/thecat-10630766/serviceAccounts/YOUR_SA@thecat-10630766.iam.gserviceaccount.com
+
+logsBucket: gs://thefunnycatimages-cat10630766
+
 steps:
   # Step 1: Build Docker image
   - name: 'gcr.io/cloud-builders/docker'
@@ -17,7 +21,7 @@ steps:
         '--platform', 'managed',
         '--region', 'europe-west2',
         '--allow-unauthenticated',
-        '--set-env-vars', 'BUCKET_NAME=<thefunnycatimages-cat10630766>'
+        '--set-env-vars', 'BUCKET_NAME=thefunnycatimages-cat10630766'
       ]
 
 images:

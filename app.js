@@ -17,8 +17,7 @@ app.get('/random-image', async (req, res) => {
     if (!files.length) return res.status(404).send('No images found.');
     
     const randomFile = files[Math.floor(Math.random() * files.length)];
-   const encodedName = encodeURIComponent(randomFile.name);
-const url = `https://storage.googleapis.com/${bucketName}/${encodedName}`;
+    const url = `https://storage.googleapis.com/${bucketName}/${randomFile.name}`;
     res.json({url});
   } catch (err) {
     console.error(err);

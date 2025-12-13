@@ -25,4 +25,4 @@ steps:
       ]
 
 images:
-  - 'gcr.io/$PROJECT_ID/random-image-app'
+  - 'gcr.io/thecat-10630766/random-image-app'
